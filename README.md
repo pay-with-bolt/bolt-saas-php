@@ -26,10 +26,26 @@ This library is designed to simplify your integration with Bolt for platforms wr
 
 Use the following Composer command to install the [the Pay With Bolt PHP SDK vendor on Packagist](https://packagist.org/packages/pay-with-bolt/bolt-saas-php)
 
+The recommended way to install Pay With Bolt PHP SDK is through
+[Composer](http://getcomposer.org).
+
+```bash
+# Install Composer
+curl -sS https://getcomposer.org/installer | php
+```
+
+Next, run the Composer command to install the latest stable version of PWB SDK:
+
 ~~~shell
  $ composer require pay-with-bolt/bolt-saas-php
  $ composer update
 ~~~
+
+After installing, you need to require Composer's autoloader:
+
+```php
+require 'vendor/autoload.php';
+```
 
 You can also install composer for your specific project by running the following in the library folder.
 
