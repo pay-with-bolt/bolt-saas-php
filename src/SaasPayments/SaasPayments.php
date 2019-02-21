@@ -100,7 +100,7 @@ class SaasPayments
      * @throws \Exception
      * @return string
      */
-    protected static function _sign(string $methodName, array $settings, string $timestamp = null)
+    protected static function _sign($methodName, array $settings, $timestamp = null)
     {
         if (!isset(self::$shared_key)) {
             throw new \Exception(self::ERRORS_LIST['ERROR_SHARED_KEY']);

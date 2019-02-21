@@ -94,7 +94,7 @@ class Payment extends SaasPayments
      * @throws \Exception
      * @return string
      */
-    public function paymentSignature(array $settings, string $timestamp = null)
+    public function paymentSignature(array $settings, $timestamp = null)
     {
         if (!isset($settings)) {
             throw new \Exception(self::ERRORS_LIST['ERROR_SETTINGS']);

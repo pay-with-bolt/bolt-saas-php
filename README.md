@@ -22,9 +22,9 @@ This library is designed to simplify your integration with Bolt for platforms wr
 * Composer (https://getcomposer.org/download/)
 
 ### Installation
-------------
 
-Use the following Composer command to install the
+
+Use the following Composer command to install the [the Pay With Bolt PHP SDK vendor on Packagist](https://packagist.org/packages/pay-with-bolt/bolt-saas-php)
 
 ~~~shell
  $ composer require pay-with-bolt/bolt-saas-php
@@ -39,13 +39,13 @@ You can also install composer for your specific project by running the following
  $ composer install
 ~~~
 
-Namespace
----------
+### Namespace
 
 All the examples below assume the `SaasPayments\SaasPayments` class is imported
 into the scope with the following namespace declaration:
 
 ~~~php
+use SaasPayments\SaasPayments;
 use SaasPayments\Setup;
 use SaasPayments\Payment;
 use SaasPayments\Refund;
@@ -56,7 +56,7 @@ use SaasPayments\Refund;
 Adding a payments setup button to your software that launches a popup or redirect is easy, you simply need to include our JS library, and then add a "Setup Payments" link or button to your page. The button requires two HTML attributes `data-bolt-setup` and `data-bolt-signature` as such:
 
 ```
-	<button data-bolt-setup="setup_encoded_string" data-bolt-signature="signature_encoded_string>">Setup Payments</button>
+<button data-bolt-setup="setup_encoded_string" data-bolt-signature="signature_encoded_string>">Setup Payments</button>
 ```   
 
 Where the encoded strings are generated server side via our library;

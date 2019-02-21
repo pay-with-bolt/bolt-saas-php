@@ -90,7 +90,7 @@ class Setup extends SaasPayments
      * @throws \Exception
      * @return string
      */
-    public function setupSignature(array $settings, string $timestamp = null)
+    public function setupSignature(array $settings, $timestamp = null)
     {
         if (!isset($settings)) {
             throw new \Exception(self::ERRORS_LIST['ERROR_SETTINGS']);
