@@ -258,7 +258,7 @@ Where `address`:
 
 ### Serverside Payment
 
-You can perform a payment request server side via `promise = payments.doPayment(options)`. A new payment will be attempted,  unless the payment is rejected prior to processing the API request will succeed and return a payment object in a SUCCESS or DECLINE status. If however the payment is rejected due to a validation rule (eg no card data), no payment will be created. For example:
+You can perform a payment request server side via `$payment->doPayment($options)`. A new payment will be attempted,  unless the payment is rejected prior to processing the API request will succeed and return a payment object in a SUCCESS or DECLINE status. If however the payment is rejected due to a validation rule (eg no card data), no payment will be created. For example:
 
 ~~~php
 use SaasPayments\Payment;
