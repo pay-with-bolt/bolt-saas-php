@@ -27,7 +27,7 @@ This library is designed to simplify your integration with Bolt for platforms wr
 Use the following Composer command to install the
 
 ~~~shell
- $ composer require 
+ $ composer require pay-with-bolt/bolt-saas-php
  $ composer update
 ~~~
 
@@ -213,8 +213,6 @@ $signature_encoded_string = $payment->paymentSignature($options);
 
 $payment_url = $payment->paymentUrl($options);
 ~~~
-
->>> IRENE -> PLEASE MAP THESE FIELDS ACCORDINGLY AND ALSO SET THE PAYMENT TO BE ONE OFF WITH NO CUSTOMER PORTAL / LOGOUT
 
 Where options:
 
