@@ -1,0 +1,16 @@
+{
+    "name": "pay-with-bolt/bolt-saas-php",
+    "description": "Pay With Bolt SDK",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "SaasPayments": "src/"
+        }
+    },
+    "require-dev": {
+        "codeception/base": "^2.5"
+    }
+}
