@@ -1,4 +1,4 @@
-# SaaSPayments
+# SaaS Payments PHP SDK
 
 SaaSPayments is the easiest way to integrate payment processing into your software. Bolt NOT a payment processor but rather connects to  major processors in each territory. 
 
@@ -10,7 +10,7 @@ This library is designed to simplify your integration with Bolt for platforms wr
 
 * Popovers: We provide a hosted popover setup and payment process, designed to appear "integrated" with your platform. The use of a hosted payment process can shield you from PCI DSS requirements of handling card details. Note for popovers to work, you will need to include a reference to the following file to your webpage:
 	
-	`link`
+`link`
 
 * Redirect URLs: If you wish to use a hosted setup & payment process but prefer not to popover your existing platform, you can redirect instead, these pages will be hosted from Bolt's domain.
 * Serverside: These are performed entirely by serverside API and do not have a user interface component. Note: The use of APIs which handle card details require your platform to be PCI DSS compiant, are only available in our white-labelled product. You can still however use the popover and redirect techniques. 
@@ -106,7 +106,7 @@ First time users will be required to supply all the above fields during account 
 
 ### Serverside Payment Readiness
 
-You can check // TODO: API to determine the setup of an instance, and specifically the payments support the instance has 
+You can check if an instance has been activated and configured for payments, by calling `getSetup`.
 
 ~~~php
 use SaasPayments\Setup;
@@ -144,7 +144,7 @@ Result:
 			account_name: "Pay with Bolt",
 			card_types: ["VISA", "MASTERCARD", "AMEX"],
 			currencies: ["USD", "GBP"],
-			features: ["AUTHORISE", "MULTI_CAPTURE", "SAVE_CARD"] // Filter for: "AUTHORISE", "MULTI_CAPTURE", "SAVE_CARD" (if specific CREATE_TOKEN feature)
+			features: ["AUTHORISE", "MULTI_CAPTURE", "SAVE_CARD"]
 		},{
 			id: "1234_5679",
 			code: "G005679",
@@ -311,7 +311,7 @@ Result:
         "alt_key": "1234",
         "description": "About the payment",
         "source": "moto",
-        "action": "PAYMENT", // PAYMENT / AUTHORISE
+        "action": "PAYMENT",
         "status": "SUCCESS",
         "gateway_status": "APPROVED",
         "reference": "BOLT-00031792",
@@ -473,7 +473,7 @@ Result:
         "alt_key": "1234",
         "description": "About the payment",
         "source": "moto",
-        "action": "PAYMENT", // PAYMENT / AUTHORISE
+        "action": "PAYMENT",
         "status": "SUCCESS",
         "gateway_status": "APPROVED",
         "reference": "BOLT-00031792",
