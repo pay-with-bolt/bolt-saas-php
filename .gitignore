@@ -2,3 +2,4 @@
 
 # compiled output
 /vendor/
+/tests/test.php

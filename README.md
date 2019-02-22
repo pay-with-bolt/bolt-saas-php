@@ -72,7 +72,7 @@ use SaasPayments\Refund;
 Adding a payments setup button to your software that launches a popup or redirect is easy, you simply need to include our JS library, and then add a "Setup Payments" link or button to your page. The button requires two HTML attributes `data-bolt-setup` and `data-bolt-signature` as such:
 
 ```
-<button data-bolt-setup="setup_encoded_string" data-bolt-signature="signature_encoded_string>">Setup Payments</button>
+<button data-bolt-setup="setup_encoded_string" data-bolt-signature="signature_encoded_string">Setup Payments</button>
 ```   
 
 Where the encoded strings are generated server side via our library;
@@ -100,7 +100,7 @@ $setup = new Setup($settings);
 $setup_encoded_string = $setup->setupButton($options);
 $signature_encoded_string = $setup->setupSignature($options);
 
-$html_button = '<button data-bolt-setup="' . $setup_encoded_string . '" data-bolt-signature="' . $signature_encoded_string . '>">Setup Payments</button>';
+$html_button = '<button data-bolt-setup="' . $setup_encoded_string . '" data-bolt-signature="' . $signature_encoded_string . '">Setup Payments</button>';
 
 // OR you can alternatively create a setup URL to redirect the user to
 
@@ -181,7 +181,7 @@ Result:
 Adding a payments popup is also easy, you simply need to include our JS library, and then add a "Payment" link or button to your page. The button requires two attributes `data-bolt-payment` and `data-bolt-signature` as such
 
 ```
-<button data-bolt-payment="payment_encoded_string" data-bolt-signature="signature_encoded_string>">Pay</button>
+<button data-bolt-payment="payment_encoded_string" data-bolt-signature="signature_encoded_string">Pay</button>
 ```   
 
 Where the encoded strings are generated serverside via our library, for example:
