@@ -10,7 +10,7 @@ This library is designed to simplify your integration with Bolt for platforms wr
 
 * Popovers: We provide a hosted popover setup and payment process, designed to appear "integrated" with your platform. The use of a hosted payment process can shield you from PCI DSS requirements of handling card details. Note for popovers to work, you will need to include a reference to the following file to your webpage:
 	
-`link`
+`<script src="https://payments.withbolt.com/b/web/s/payments-1.0.6.min.js">`
 
 * Redirect URLs: If you wish to use a hosted setup & payment process but prefer not to popover your existing platform, you can redirect instead, these pages will be hosted from Bolt's domain.
 * Serverside: These are performed entirely by serverside API and do not have a user interface component. Note: The use of APIs which handle card details require your platform to be PCI DSS compiant, are only available in our white-labelled product. You can still however use the popover and redirect techniques. 
