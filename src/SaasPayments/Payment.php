@@ -54,7 +54,7 @@ class Payment extends SaasPayments
 				"phone" => isset($account['phone']) ? $account['phone'] : null,
              ] : null,
 
-			"onSuccessEmail" => isset($settings['success_url']) ? $settings['success_url'] : null,
+			"successUrl" => isset($settings['success_url']) ? $settings['success_url'] : null,
 			"channelKey" => isset($settings['channel_key']) ? $settings['channel_key'] : "web",
 			"frequency" => "ONEOFF",
 			"disableMyDetails" => "TRUE",
