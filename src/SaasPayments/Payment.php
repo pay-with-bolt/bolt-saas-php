@@ -35,7 +35,8 @@ class Payment extends SaasPayments
 			"defaultAmount" => isset($settings['default_amount']) ? $settings['default_amount'] : null,
 			"altKey" => isset($settings['alt_key']) ? $settings['alt_key'] : null,
 			"orderDesc" => isset($settings['description']) ? $settings['description'] : null,
-			"accountKey" => $accountKey,
+			"channelTitle" => isset($settings['title']) ? $settings['title'] : null,
+            "accountKey" => $accountKey,
 			"crm" => isset($account) ? [
 				"address" => isset($account['address']) ? [
 					"country" => isset($account['address']['country']) ? $account['address']['country'] : null,
