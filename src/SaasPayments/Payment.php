@@ -57,9 +57,26 @@ class Payment extends SaasPayments
 
 			"successUrl" => isset($settings['success_url']) ? $settings['success_url'] : null,
 			"channelKey" => isset($settings['channel_key']) ? $settings['channel_key'] : "web",
-			"frequency" => "ONEOFF",
 			"disableMyDetails" => "TRUE",
-			"nonce" => isset($settings['nonce']) ? $settings['nonce'] : ("bolt_" . (time() * 1000))
+            "nonce" => isset($settings['nonce']) ? $settings['nonce'] : ("bolt_" . (time() * 1000)),
+            
+            "authOrCapture" => isset($settings['action']) ? $settings['action'] : null,
+            "frequency" => isset($settings['frequency']) ? $settings['frequency'] : null,
+            "defaultFrequency" => isset($settings['default_frequency']) ? $settings['default_frequency'] : null,
+            "isFiniteOccurrences" => isset($settings['occurrences']) ? 'TRUE' : null,
+            "defaultIsFiniteOccurrences" => isset($settings['default_occurrences']) ? 'TRUE' : null,
+            "occurrences" => isset($settings['occurrences']) ? $settings['occurrences'] : null,
+            "defaultOccurrences" => isset($settings['default_occurrences']) ? $settings['default_occurrences'] : null,
+            
+            "delayedStart" => (isset($settings['start_date']) || isset($settings['start_days'])) ? 'TRUE' : null,
+            "defaultDelayedStart" => (isset($settings['default_start_date']) || isset($settings['default_start_days'])) ? 'TRUE' : null,
+            "startDate" => isset($settings['start_date']) ? $settings['start_date'] : null,
+            "defaultStartDate" => isset($settings['default_start_date']) ? $settings['default_start_date'] : null,
+            "startDays" => isset($settings['start_days']) ? $settings['start_days'] : null,
+            "defaultStartDays" => isset($settings['default_start_days']) ? $settings['default_start_days'] : null,
+            "saveCard" => isset($settings['save_card']) ? $settings['save_card'] : null,
+            "defaultSaveCard" => isset($settings['default_save_card']) ? $settings['default_save_card'] : null,
+            "checkoutText" => isset($settings['checkout_text']) ? $settings['checkout_text'] : null
         ];
 
         unset($accSettings['account']);
