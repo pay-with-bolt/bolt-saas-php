@@ -76,7 +76,8 @@ class Payment extends SaasPayments
             "defaultStartDays" => isset($settings['default_start_days']) ? $settings['default_start_days'] : null,
             "saveCard" => isset($settings['save_card']) ? $settings['save_card'] : null,
             "defaultSaveCard" => isset($settings['default_save_card']) ? $settings['default_save_card'] : null,
-            "checkoutText" => isset($settings['checkout_text']) ? $settings['checkout_text'] : null
+            "checkoutText" => isset($settings['checkout_text']) ? $settings['checkout_text'] : null,
+            "skipReceipt" => isset($settings['skip_receipt']) ? $settings['skip_receipt'] : null
         ];
 
         unset($accSettings['account']);
