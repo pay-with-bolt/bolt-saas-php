@@ -10,7 +10,7 @@ This library is designed to simplify your integration with Bolt for platforms wr
 
 * Popovers: We provide a hosted popover setup and payment process, designed to appear "integrated" with your platform. The use of a hosted payment process can shield you from PCI DSS requirements of handling card details. Note for popovers to work, you will need to include a reference to the following file to your webpage:
 	
-    `<script src="https://payments.withbolt.com/b/web/s/payments-1.0.6.min.js">`
+    `<script src="https://payments.withbolt.com/b/web/s/payments-1.0.9.min.js">`
 
 * Redirect URLs: If you wish to use a hosted setup & payment process but prefer not to popover your existing platform, you can redirect instead, these pages will be hosted from Bolt's domain.
 * Serverside: These are performed entirely by serverside API and do not have a user interface component. Note: The use of APIs which handle card details require your platform to be PCI DSS compiant, are only available in our white-labelled product. You can still however use the popover and redirect techniques. 
@@ -245,6 +245,19 @@ Where options:
 | `source` | can be any of "moto", "ecommerce" - default "ecommerce" |
 | `account` | can be an `id` referencing an existing account or a fully formed account object which will be created or amended |
 | `success_url` | an optional URL to send the browser upon successful payment, if you do not pass this be sure to catch the Javascript message |
+| `action` | PAYMENT (default) or AUTHORISE |
+| `frequency` | ONEOFF (default), WEEKLY, FORTNIGHTLY, BIMONTHLY, MONTHLY, QUARTERLY, BIANNUALLY or ANNUALLY |
+| `default_frequency` | ONEOFF (default), WEEKLY, FORTNIGHTLY, BIMONTHLY, MONTHLY, QUARTERLY, BIANNUALLY or ANNUALLY |
+| `occurrences` | Number of payments |
+| `default_occurrences` | Default number of payments |
+| `start_date` | Date of the first payment |
+| `default_start_date` | Default date of the first payment |
+| `start_days` | When the first payment will be processed |
+| `default_start_days` | When the first payment will be processed |
+| `save_card` | To hard code a save_card use boolean true or false, or undefined for user selectable |
+| `default_save_card` | To set the default value of save_card |
+| `checkout_text` | Text dispalyed in the payment form |
+| `skip_receipt` | Set to true to auto close the popup and skip the receipt page after a payment |
 
 Where `account`:
 
